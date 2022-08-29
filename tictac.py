@@ -75,3 +75,19 @@ def player_choicer(board):
             print("Wrong input! Try again")
         if not space_check(board, choice):
             print("This place is already taken. Try again")
+
+def full_board_check(board):
+    for position in board:
+        if position == ' ':
+            return False
+
+    return True
+
+def replay():
+    choice = '#'
+
+    while choice not in ['Y', 'N']:
+        choice = input("Do you want to replay the game? Type 'Y' if yes and 'N' otherwise")
+
+        if choice not in ['Y', 'N']:
+            print("Wrong input! Try again")
