@@ -61,3 +61,17 @@ def choose_first():
         return "Player1"
     else:
         return "Player2"
+
+def space_check(board, position):
+    return board[-position] == ' ' or position in range(0,9)
+
+def player_choicer(board):
+    choice = 10
+
+    while choice not in range(0,9) and not space_check(board, choice):
+        choice = input("Enter the position 1-9 you want to place your marker in:")
+
+        if choice not in range(0,9):
+            print("Wrong input! Try again")
+        if not space_check(board, choice):
+            print("This place is already taken. Try again")
