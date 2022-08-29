@@ -1,4 +1,6 @@
-﻿def display_board(board):
+﻿import random
+
+def display_board(board):
     for tiles in range(0, len(board)-1, 3):
         print(board[tiles+1:tiles+4])
 
@@ -51,4 +53,11 @@ def win_check(board, mark):
     else:
         return False
 
-print(win_check(test_board, 'O'))
+#print(win_check(test_board, 'O'))
+
+def choose_first():
+    choice = random.randInt(1, 2)
+    if choice == 1:
+        return "Player1"
+    else:
+        return "Player2"
