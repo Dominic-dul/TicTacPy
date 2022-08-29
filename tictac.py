@@ -157,3 +157,6 @@ while True:
 
     if not replay():
         break
+    else:
+        player1 = '#'
+        player2 = '#'
